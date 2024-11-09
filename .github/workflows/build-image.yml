@@ -21,7 +21,7 @@ jobs:
     steps:
         - name: Checkout repository
           uses: actions/checkout@v4
-          
+
         - name: Build image
           id: build_image
           uses: redhat-actions/buildah-build@v2
@@ -30,3 +30,24 @@ jobs:
                 ./Containerfile
             image: ${{ env.IMAGE_NAME }}
             oci: false
+
+        - name: Login to GitHub Container Registry
+          uses: docker/login-action@v3
+          with:
+            registry: ghcr.io
+            username: ${{ github.actor }}
+            password: ${{ secrets.GITHUB_TOKEN }}
+
+        - name: Push Image to GHCR
+          uses: redhat-actions/push-to-registry@v2
+          id: push
+          env:
+            REGISTRY_USER: ${{ github.actor }}
+            REGISTRY_PASSWORD: ${{ github.token }}
+          with:
+            image: ${{ steps.build_image.outputs.image }}
+            registry: "ghcr.io/${{ github.repository_owner }}"
+            username: ${{ env.REGISTRY_USER }}
+            password: ${{ env.REGISTRY_PASSWORD }}
+            extra-args: |
+              --disable-content-trust
