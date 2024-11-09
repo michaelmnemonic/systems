@@ -55,13 +55,15 @@ RUN dnf install -y                  \
   wine-times-new-roman-fonts-system
 
 # Hide some application entries for
-RUN sed -i 's@\[Desktop Entry\]@\[Desktop Entry\]\nNoDisplay=true@g' \
-  /usr/share/applications/syncthing-*.desktop                        \
-  /usr/share/applications/org.kde.ktnef.desktop                      \
-  /usr/share/applications/org.kde.contactprintthemeeditor            \
-  /usr/share/applications/org.kde.contactthemeeditor                 \
-  /usr/share/applications/org.kde.headerthemeeditor                  \
-  /usr/share/applications/org.kde.sieveeditor                        \
+RUN for i in                                                                     \
+  /usr/share/applications/syncthing-start.desktop                                \
+  /usr/share/applications/syncthing-ui.desktop                                   \
+  /usr/share/applications/org.kde.ktnef.desktop                                  \
+  /usr/share/applications/org.kde.contactprintthemeeditor.desktop                \
+  /usr/share/applications/org.kde.contactthemeeditor.desktop                     \
+  /usr/share/applications/org.kde.headerthemeeditor.desktop                      \
+  /usr/share/applications/org.kde.sieveeditor.desktop                            \
+  ; do sed -i 's@\[Desktop Entry\]@\[Desktop Entry\]\nNoDisplay=true@g' $i; done
 
 # Hide application entries for syncthing
 
