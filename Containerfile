@@ -8,8 +8,20 @@ RUN dnf install -y pam_mount
 
 # Add desktop applications
 RUN dnf install -y \
+  AusweisApp2      \
+  gwenview         \
   kate             \
-  ksshaskpass
+  kcalc            \
+  kdepim-addons    \
+  kmail            \
+  ksshaskpass      \
+  merkuro          \
+  neochat          \
+  okular           \
+  pcsc-cyberjack   \
+  skanpage         \
+  syncthing        \
+  transmission-qt  \
 
 # Add fonts
 RUN dnf install -y     \
@@ -23,7 +35,7 @@ RUN dnf install -y                                                              
 
 # Add addtional codecs
 RUN dnf swap -y ffmpeg-free ffmpeg --allowerasing &&                                                    \
-  dnf swap -y mesa-va-drivers mesa-va-drivers-freeworld &&                                                 \
+  dnf swap -y mesa-va-drivers mesa-va-drivers-freeworld &&                                              \
   dnf swap -y mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
 
 # Add locale
