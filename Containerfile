@@ -4,7 +4,7 @@ FROM quay.io/fedora-ostree-desktops/kinoite:41
 RUN dnf remove -y firewall-config && dnf clean all
 
 # Create user "maik"
-RUN useradd -G wheel -u 1000 maik && \
+RUN useradd -G wheel -u 1000 -s /bin/bash maik && \
   usermod -p '$6$yIc8YCsXt1rkzeoc$72vBqymGWj7MCX0GduTvUMBqxAvxz4WYDJcASMEBaevyCrKAI1btoDM5czg366gwr6N55Zrn5zlPKTaUGsprV/' maik
 
 # Set root password
