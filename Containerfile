@@ -23,8 +23,8 @@ RUN dnf install -y                                                              
 
 # Add addtional codecs
 RUN dnf swap -y ffmpeg-free ffmpeg --allowerasing &&                                                    \
-  dnf swap mesa-va-drivers mesa-va-drivers-freeworld &&                                                 \
-  dnf swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
+  dnf swap -y mesa-va-drivers mesa-va-drivers-freeworld &&                                                 \
+  dnf swap -y mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
 
 # Add locale
 RUN dnf install -y langpacks-de
