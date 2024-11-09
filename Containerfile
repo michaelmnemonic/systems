@@ -54,8 +54,17 @@ RUN dnf install -y                  \
   wine-times-new-roman-fonts        \
   wine-times-new-roman-fonts-system
 
+# Hide some application entries for
+RUN sed -i 's@\[Desktop Entry\]@\[Desktop Entry\]\nNoDisplay=true@g' \
+  /usr/share/applications/syncthing-*.desktop                        \
+  /usr/share/applications/org.kde.ktnef.desktop                      \
+  /usr/share/applications/org.kde.contactprintthemeeditor            \
+  /usr/share/applications/org.kde.contactthemeeditor                 \
+  /usr/share/applications/org.kde.headerthemeeditor                  \
+  /usr/share/applications/org.kde.sieveeditor                        \
+
 # Hide application entries for syncthing
-RUN sed -i 's@\[Desktop Entry\]@\[Desktop Entry\]\nNoDisplay=true@g' /usr/share/applications/syncthing-*.desktop
+
 
 # Create user "maik"
 RUN useradd -G wheel -u 1000 -s /bin/bash maik && \
