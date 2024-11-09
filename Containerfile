@@ -65,8 +65,8 @@ RUN for i in                                                                    
   /usr/share/applications/org.kde.sieveeditor.desktop                            \
   ; do sed -i 's@\[Desktop Entry\]@\[Desktop Entry\]\nNoDisplay=true@g' $i; done
 
-# Hide application entries for syncthing
-
+# Add flathub
+RUN flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 # Create user "maik"
 RUN useradd -G wheel -u 1000 -s /bin/bash maik && \
