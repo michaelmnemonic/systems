@@ -25,6 +25,7 @@ RUN dnf install -y \
 
 # Add gaming applications
 RUN dnf install -y                  \
+  --setopt=excludepkgs=nvtop        \
   gamescope                         \
   mangohud                          \
   steam                             \
@@ -52,6 +53,9 @@ RUN dnf swap -y ffmpeg-free ffmpeg --allowerasing &&                            
 
 # Add locale
 RUN dnf install -y langpacks-de
+
+# Hide application entries for syncthing
+RUN sed -i 's@\[Desktop Entry\]@\[Desktop Entry\]\nNoDisplay=true@g' /usr/share/applications/syncthing-*.desktop
 
 # Create user "maik"
 RUN useradd -G wheel -u 1000 -s /bin/bash maik && \
