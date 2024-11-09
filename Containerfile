@@ -23,7 +23,6 @@ RUN dnf install -y                                                              
 
 # Add addtional codecs
 RUN dnf swap -y ffmpeg-free ffmpeg --allowerasing &&                                                    \
-  dnf update -y @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin && \
   dnf swap mesa-va-drivers mesa-va-drivers-freeworld &&                                                 \
   dnf swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
 
