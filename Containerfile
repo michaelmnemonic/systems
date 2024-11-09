@@ -17,8 +17,8 @@ RUN dnf install -y     \
   rsms-inter-fonts
 
 # Add rpmfusion
-RUN dnf install -y \
-  https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
+RUN dnf install -y                                                                                      \
+  https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm       \
   https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 # Add addtional codecs
