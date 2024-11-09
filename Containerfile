@@ -23,6 +23,19 @@ RUN dnf install -y \
   syncthing        \
   transmission-qt  \
 
+# Add gaming applications
+RUN dnf install -y                  \
+  --excludepkgs=nvtop               \
+  gamescope                         \
+  mangohud                          \
+  steam                             \
+  wine-arial-fonts                  \
+  wine-core                         \
+  wine-mono                         \
+  wine-pulseaudio                   \
+  wine-times-new-roman-fonts        \
+  wine-times-new-roman-fonts-system
+
 # Add fonts
 RUN dnf install -y     \
   jetbrains-mono-fonts \
