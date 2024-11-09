@@ -7,7 +7,9 @@ RUN dnf remove -y firewall-config
 RUN dnf install -y pam_mount
 
 # Add desktop applications
-RUN dnf install -y kate
+RUN dnf install -y \
+  kate             \
+  ksshaskpass
 
 # Add fonts
 RUN dnf install -y     \
