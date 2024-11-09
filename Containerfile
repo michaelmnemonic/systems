@@ -9,6 +9,9 @@ RUN dnf install -y pam_mount
 # Add desktop applications
 RUN dnf install -y kate
 
+# Add locale
+RUN dnf install -y langpacks-de
+
 # Create user "maik"
 RUN useradd -G wheel -u 1000 -s /bin/bash maik && \
   usermod -p '$6$yIc8YCsXt1rkzeoc$72vBqymGWj7MCX0GduTvUMBqxAvxz4WYDJcASMEBaevyCrKAI1btoDM5czg366gwr6N55Zrn5zlPKTaUGsprV/' maik
