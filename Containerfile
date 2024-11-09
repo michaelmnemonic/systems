@@ -4,7 +4,7 @@ FROM quay.io/fedora-ostree-desktops/kinoite:41
 RUN dnf remove -y firewall-config
 
 # Add pam_home for mounting user home
-RUN dnf install -y pam_home
+RUN dnf install -y pam_mount
 
 # Create user "maik"
 RUN useradd -G wheel -u 1000 -s /bin/bash maik && \
