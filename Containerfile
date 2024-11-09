@@ -1,7 +1,7 @@
 FROM quay.io/fedora-ostree-desktops/kinoite:41
 
 # Remove unneeded packages
-RUN dnf remove firewall-config && dnf clean all
+RUN dnf remove -y firewall-config && dnf clean all
 
 # Create user "maik"
 RUN useradd -G wheel -u 1000 maik && \
