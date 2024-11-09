@@ -16,6 +16,9 @@ RUN dnf remove -y firewall-config
 # Add pam_home for mounting user home
 RUN dnf install -y pam_mount
 
+# Add lm-sensors for fan control via fan2go
+RUN dnf install -y lm-sensors
+
 # Add desktop applications
 RUN dnf install -y \
   AusweisApp2      \
