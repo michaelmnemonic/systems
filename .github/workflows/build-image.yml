@@ -26,16 +26,6 @@ jobs:
         - name: Checkout repository
           uses: actions/checkout@v4
 
-        - name: Cache Buildah Storage
-          uses: actions/cache@v3
-          with:
-            path: |
-              /var/lib/containers
-              /home/runner/.local/share/containers
-            key: ${{ env.IMAGE_NAME }}
-            restore-keys: |
-              ${{ env.IMAGE_NAME }}
-
         - name: Image Metadata
           uses: docker/metadata-action@v5
           id: meta
