@@ -25,7 +25,6 @@ RUN dnf install -y \
 
 # Add gaming applications
 RUN dnf install -y                  \
-  --excludepkgs=nvtop               \
   gamescope                         \
   mangohud                          \
   steam                             \
