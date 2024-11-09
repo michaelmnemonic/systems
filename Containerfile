@@ -9,6 +9,11 @@ RUN dnf install -y pam_mount
 # Add desktop applications
 RUN dnf install -y kate
 
+# Add fonts
+RUN dnf intsall -y     \
+  jetbrains-mono-fonts \
+  rsms-inter-fonts
+
 # Add locale
 RUN dnf install -y langpacks-de
 
