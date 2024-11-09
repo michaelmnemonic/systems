@@ -34,7 +34,7 @@ jobs:
               /home/runner/.local/share/containers
             key: buildah-${{ runner.os }}
             restore-keys: |
-              buildah-${{ runner.os }}
+              buildah-${{ runner.os }}-
 
         - name: Image Metadata
           uses: docker/metadata-action@v5
