@@ -1,0 +1,29 @@
+name: build-image
+on:
+    push:
+        branches:
+            - main
+        paths-ignore:
+            - '**/README.md'
+env:
+  IMAGE_NAME: "${{ github.event.repository.name }}"
+
+jobs:
+  build_push:
+    name: Build and push image
+    runs-on: ubuntu-24.04
+
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+
+    steps:
+        - name: Build image
+          id: build_image
+          uses: redhat-actions/buildah-build@v2
+          with:
+            containerfiles: |
+                ./Containerfile
+            image: ${{ env.IMAGE_NAME }}
+            oci: false
