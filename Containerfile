@@ -17,7 +17,7 @@ RUN dnf remove -y firewall-config
 RUN dnf install -y pam_mount
 
 # Add lm-sensors for fan control via fan2go
-RUN dnf install -y lm-sensors
+RUN dnf install -y lm_sensors
 
 # Add desktop applications
 RUN dnf install -y \
