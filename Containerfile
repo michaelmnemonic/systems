@@ -10,7 +10,7 @@ RUN dnf install -y pam_mount
 RUN dnf install -y kate
 
 # Add fonts
-RUN dnf intsall -y     \
+RUN dnf install -y     \
   jetbrains-mono-fonts \
   rsms-inter-fonts
 
