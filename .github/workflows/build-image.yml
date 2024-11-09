@@ -32,9 +32,9 @@ jobs:
             path: |
               /var/lib/containers
               /home/runner/.local/share/containers
-            key: buildah-${{ runner.os }}
+            key: ${{ env.IMAGE_NAME }}
             restore-keys: |
-              buildah-${{ runner.os }}-
+              ${{ env.IMAGE_NAME }}
 
         - name: Image Metadata
           uses: docker/metadata-action@v5
