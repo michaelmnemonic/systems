@@ -23,6 +23,24 @@ RUN dnf install -y \
   syncthing        \
   transmission-qt
 
+# Add fonts
+RUN dnf install -y     \
+  jetbrains-mono-fonts \
+  rsms-inter-fonts
+
+# Add locale
+RUN dnf install -y langpacks-de
+
+# Add rpmfusion
+RUN dnf install -y                                                                                      \
+  https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm       \
+  https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
+# Add addtional codecs
+RUN dnf swap -y ffmpeg-free ffmpeg --allowerasing &&                                                    \
+  dnf swap -y mesa-va-drivers mesa-va-drivers-freeworld &&                                              \
+  dnf swap -y mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
+
 # Add gaming applications
 RUN dnf install -y                  \
   --setopt=excludepkgs=nvtop        \
@@ -35,24 +53,6 @@ RUN dnf install -y                  \
   wine-pulseaudio                   \
   wine-times-new-roman-fonts        \
   wine-times-new-roman-fonts-system
-
-# Add fonts
-RUN dnf install -y     \
-  jetbrains-mono-fonts \
-  rsms-inter-fonts
-
-# Add rpmfusion
-RUN dnf install -y                                                                                      \
-  https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm       \
-  https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-
-# Add addtional codecs
-RUN dnf swap -y ffmpeg-free ffmpeg --allowerasing &&                                                    \
-  dnf swap -y mesa-va-drivers mesa-va-drivers-freeworld &&                                              \
-  dnf swap -y mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
-
-# Add locale
-RUN dnf install -y langpacks-de
 
 # Hide application entries for syncthing
 RUN sed -i 's@\[Desktop Entry\]@\[Desktop Entry\]\nNoDisplay=true@g' /usr/share/applications/syncthing-*.desktop
