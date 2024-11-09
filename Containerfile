@@ -26,6 +26,7 @@ RUN dnf install -y \
   kmail            \
   ksshaskpass      \
   merkuro          \
+  mpv              \
   neochat          \
   okular           \
   pcsc-cyberjack   \
