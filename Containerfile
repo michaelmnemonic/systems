@@ -21,7 +21,7 @@ RUN dnf install -y \
   pcsc-cyberjack   \
   skanpage         \
   syncthing        \
-  transmission-qt  \
+  transmission-qt
 
 # Add gaming applications
 RUN dnf install -y                  \
