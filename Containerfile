@@ -65,12 +65,6 @@ RUN for i in                                                                    
   /usr/share/applications/org.kde.sieveeditor.desktop                            \
   ; do sed -i 's@\[Desktop Entry\]@\[Desktop Entry\]\nNoDisplay=true@g' $i; done
 
-# Add flathub
-RUN flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-
-# Disable fedora flatpak repo
-RUN flatpak remote-modify --disable fedora
-
 # Create user "maik"
 RUN useradd -G wheel -u 1000 -s /bin/bash maik && \
   usermod -p '$6$yIc8YCsXt1rkzeoc$72vBqymGWj7MCX0GduTvUMBqxAvxz4WYDJcASMEBaevyCrKAI1btoDM5czg366gwr6N55Zrn5zlPKTaUGsprV/' maik
