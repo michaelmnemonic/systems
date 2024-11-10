@@ -59,13 +59,14 @@ RUN dnf install -y langpacks-de
 
 # Hide some application entries for
 RUN for i in                                                                     \
-  /usr/share/applications/syncthing-start.desktop                                \
-  /usr/share/applications/syncthing-ui.desktop                                   \
-  /usr/share/applications/org.kde.ktnef.desktop                                  \
   /usr/share/applications/org.kde.contactprintthemeeditor.desktop                \
   /usr/share/applications/org.kde.contactthemeeditor.desktop                     \
   /usr/share/applications/org.kde.headerthemeeditor.desktop                      \
+  /usr/share/applications/org.kde.ktnef.desktop                                  \
+  /usr/share/applications/org.kde.pimdataexporter                                \
   /usr/share/applications/org.kde.sieveeditor.desktop                            \
+  /usr/share/applications/syncthing-start.desktop                                \
+  /usr/share/applications/syncthing-ui.desktop                                   \
   ; do sed -i 's@\[Desktop Entry\]@\[Desktop Entry\]\nNoDisplay=true@g' $i; done
 
 # Create user "maik"
