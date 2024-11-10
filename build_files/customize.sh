@@ -51,7 +51,7 @@ dnf install -y                                                                  
   wine-times-new-roman-fonts                                                                           \
   wine-times-new-roman-fonts-system
 
-#Hide some application entries for
+#Hide some application entries
 for i in                                                                                               \
   /usr/share/applications/org.kde.contactprintthemeeditor.desktop                                      \
   /usr/share/applications/org.kde.contactthemeeditor.desktop                                           \
@@ -62,3 +62,6 @@ for i in                                                                        
   /usr/share/applications/syncthing-start.desktop                                                      \
   /usr/share/applications/syncthing-ui.desktop                                                         \
 ; do sed -i 's@\[Desktop Entry\]@\[Desktop Entry\]\nNoDisplay=true@g' $i; done
+
+# Do not show steam in Network and FileTransfer category
+sed -i 's/Network;FileTransfer;//' /usr/share/applications/steam.desktop
