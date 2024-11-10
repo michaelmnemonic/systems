@@ -1,0 +1,11 @@
+[Unit]
+Description=Mount orpheus at boot
+
+[Mount]
+What=LABEL=FEDORA
+Where=/var/home/maik
+Type=btrfs
+Options=subvol=@maik
+
+[Install]
+WantedBy=multi-user.target
