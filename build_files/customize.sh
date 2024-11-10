@@ -13,7 +13,10 @@ dnf swap -y mesa-va-drivers mesa-va-drivers-freeworld
 dnf swap -y mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
 
 # Remove unneeded packages
-dnf remove -y firewall-config
+dnf remove -y                                                                                          \
+  firewall-config                                                                                      \
+  krdp                                                                                                 \
+  krfb
 
 # Add needed packages
 dnf install -y                                                                                         \
