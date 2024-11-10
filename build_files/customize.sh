@@ -54,7 +54,7 @@ for i in                                                                        
   /usr/share/applications/org.kde.contactthemeeditor.desktop                                           \
   /usr/share/applications/org.kde.headerthemeeditor.desktop                                            \
   /usr/share/applications/org.kde.ktnef.desktop                                                        \
-  /usr/share/applications/org.kde.pimdataexporter                                                      \
+  /usr/share/applications/org.kde.pimdataexporter.desktop                                                      \
   /usr/share/applications/org.kde.sieveeditor.desktop                                                  \
   /usr/share/applications/syncthing-start.desktop                                                      \
   /usr/share/applications/syncthing-ui.desktop                                                         \
