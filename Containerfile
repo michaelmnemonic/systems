@@ -30,7 +30,6 @@ RUN dnf install -y \
   ksshaskpass      \
   merkuro          \
   mpv              \
-  neochat          \
   okular           \
   pcsc-cyberjack   \
   skanpage         \
