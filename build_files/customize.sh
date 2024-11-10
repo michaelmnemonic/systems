@@ -23,10 +23,8 @@ dnf install -y                                                                  
   --setopt=excludepkgs=nvtop                                                                           \
   AusweisApp2                                                                                          \
   gamescope                                                                                            \
-  gwenview                                                                                             \
   jetbrains-mono-fonts                                                                                 \
   kate                                                                                                 \
-  kcalc                                                                                                \
   kdepim-addons                                                                                        \
   kmail                                                                                                \
   ksshaskpass                                                                                          \
@@ -41,7 +39,6 @@ dnf install -y                                                                  
   mangohud                                                                                             \
   merkuro                                                                                              \
   mpv                                                                                                  \
-  okular                                                                                               \
   pam_mount                                                                                            \
   pcsc-cyberjack                                                                                       \
   rsms-inter-fonts                                                                                     \
