@@ -105,6 +105,7 @@ RUN dnf install -y                                                              
   steam                                                                                                \
   wine-arial-fonts                                                                                     \
   wine-core                                                                                            \
+  wine-ldap                                                                                            \
   wine-mono                                                                                            \
   wine-pulseaudio                                                                                      \
   wine-times-new-roman-fonts                                                                           \
