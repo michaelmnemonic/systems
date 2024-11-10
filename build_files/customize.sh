@@ -19,6 +19,7 @@ dnf remove -y                                                                   
   krfb
 
 # Add needed packages
+# FIXME: check qt6-qtlocation is this a packaging bug of merkuro?
 dnf install -y                                                                                         \
   --setopt=excludepkgs=nvtop                                                                           \
   AusweisApp2                                                                                          \
@@ -38,6 +39,7 @@ dnf install -y                                                                  
   lm_sensors-libs                                                                                      \
   mangohud                                                                                             \
   merkuro                                                                                              \
+  qt6-qtlocation                                                                                       \
   mpv                                                                                                  \
   pam_mount                                                                                            \
   pcsc-cyberjack                                                                                       \
