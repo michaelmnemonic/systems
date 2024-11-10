@@ -83,9 +83,11 @@ RUN dnf install -y                                                              
 && /usr/libexec/containerbuild/cleanup.sh
 
 # Add basic kde appllications
+# FIXME: check okular flatpak for support of color-schemes
 RUN dnf install -y                                                                                     \
   kate                                                                                                 \
   ksshaskpass                                                                                          \
+  okular                                                                                               \
   skanpage                                                                                             \
 && /usr/libexec/containerbuild/cleanup.sh
 
