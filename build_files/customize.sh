@@ -31,6 +31,11 @@ dnf install -y                                                                  
   kmail                                                                                                \
   ksshaskpass                                                                                          \
   langpacks-de                                                                                         \
+  libreoffice-calc                                                                                     \
+  libreoffice-impress                                                                                  \
+  libreoffice-kf6                                                                                      \
+  libreoffice-langpack-de                                                                              \
+  libreoffice-writer                                                                                   \
   lm_sensors                                                                                           \
   lm_sensors-libs                                                                                      \
   mangohud                                                                                             \
