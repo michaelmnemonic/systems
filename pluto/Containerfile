@@ -5,7 +5,7 @@ RUN useradd -G wheel -u 1000 -s /bin/bash maik && \
   usermod -p '$6$yIc8YCsXt1rkzeoc$72vBqymGWj7MCX0GduTvUMBqxAvxz4WYDJcASMEBaevyCrKAI1btoDM5czg366gwr6N55Zrn5zlPKTaUGsprV/' maik
 
 # Apply file-based customization
-COPY ../_common/ files/ /
+COPY _shared/files/ files/ /
 
 # Remove unneeded packages
 RUN dnf remove -y                                                                                       \
