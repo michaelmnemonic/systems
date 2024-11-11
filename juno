@@ -7,6 +7,9 @@ RUN useradd -G wheel -u 1000 -s /bin/bash maik && \
 # Apply file-based customization
 COPY common_files/ juno_files/ /
 
+# Enable system services
+RUN systemctl enable bootc-fetch-apply-updates.timer
+
 # Remove unneeded packages
 RUN dnf remove -y                                                                                       \
   firefox                                                                                               \
