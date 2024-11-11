@@ -5,7 +5,7 @@ RUN useradd -G wheel -u 1000 -s /bin/bash maik && \
   usermod -p '$6$yIc8YCsXt1rkzeoc$72vBqymGWj7MCX0GduTvUMBqxAvxz4WYDJcASMEBaevyCrKAI1btoDM5czg366gwr6N55Zrn5zlPKTaUGsprV/' maik
 
 # Apply file-based customization
-COPY common_files/ pluto_files/ /
+COPY ../_common/ files/ /
 
 # Remove unneeded packages
 RUN dnf remove -y                                                                                       \
@@ -116,9 +116,9 @@ RUN dnf install -y                                                              
 
 # Add umu launcher
 # FIXME: add fedora 41 version once availlable upstream
-COPY rpm/umu-launcher-1.1.3-1.20241023.8bc37bb.fc40.noarch.rpm /tmp
+COPY rpm/umu-launcher-1.1.3-1.20241105.8bc37bb.fc41.noarch.rpm /tmp/
 RUN dnf install -y                                                                                     \
-  /tmp/umu-launcher-1.1.3-1.20241023.8bc37bb.fc40.noarch.rpm                                           \
+  /tmp/umu-launcher-1.1.3-1.20241105.8bc37bb.fc41.noarch.rpm                                           \
 && /usr/libexec/containerbuild/cleanup.sh
 
 # Hide some application entries
