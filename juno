@@ -55,4 +55,4 @@ RUN dnf install -y                                                              
 RUN for i in                                                                                           \
   /usr/share/applications/syncthing-start.desktop                                                      \
   /usr/share/applications/syncthing-ui.desktop                                                         \
-; do sed -i 's@\[Desktop Entry\]@\[Desktop Entry\]\nNoDisplay=true@g' $i; done  &&
+; do sed -i 's@\[Desktop Entry\]@\[Desktop Entry\]\nNoDisplay=true@g' $i; done
