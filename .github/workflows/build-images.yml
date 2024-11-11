@@ -49,7 +49,7 @@ jobs:
 
         - name: Copy shared ressources
           run: |
-            cp -Rv ./_shared ./${{ env.IMAGE_NAME }}/
+            cp -Rv ./_shared/files/ ./${{ env.IMAGE_NAME }}/files
 
         - name: Build image
           id: build_image
