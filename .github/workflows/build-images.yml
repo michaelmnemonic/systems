@@ -52,10 +52,10 @@ jobs:
           uses: redhat-actions/buildah-build@v2
           with:
             containerfiles: |
-                ./${{ env.IMAGE_NAME }}/Containerfile
+              ./${{ env.IMAGE_NAME }}/Containerfile
             image: ${{ env.IMAGE_NAME }}
             labels: ${{ steps.meta.outputs.labels }}
-            context: .
+            context: ${{ env.GITHUB_WORKSPACE }}
             oci: false
 
         - name: Push Image to GHCR
