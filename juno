@@ -15,7 +15,7 @@ RUN dnf remove -y                                                               
   firefox                                                                                               \
   firefox-langpacks                                                                                     \
   gnome-system-monitor                                                                                  \
-&& /usr/libexec/containerbuild
+&& /usr/libexec/containerbuild/cleanup.sh
 
 # Add rpmfusion
 RUN dnf install -y                                                                                      \
