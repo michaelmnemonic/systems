@@ -1,5 +1,5 @@
 ---
-name: build-pluto
+name: build-juno
 on:
     push:
         branches:
