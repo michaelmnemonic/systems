@@ -19,12 +19,6 @@ jobs:
   build_image:
     name: Build and push image
     runs-on: ubuntu-24.04
-
-    permissions:
-      contents: read
-      packages: write
-      id-token: write
-
     steps:
         - name: Checkout repository
           uses: actions/checkout@v4

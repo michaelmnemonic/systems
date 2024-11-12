@@ -15,7 +15,11 @@ jobs:
   build_pluto:
     name: Build and push image
     uses: ./.github/workflows/build.yml
-    secrets: inherit
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+
     with:
       image_name: "pluto"
       base_image_name: "kinoite"
