@@ -69,7 +69,7 @@ dnf install -y                                                                  
 
 # Add mkosi, ukify
 dnf install -y                                                                                         \
-  mkosi
+  mkosi                                                                                                \
   ukify
 
 # Hide some application entries
