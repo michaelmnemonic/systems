@@ -67,6 +67,10 @@ dnf install -y                                                                  
 dnf install -y                                                                                         \
   /tmp/umu-launcher-1.1.3-1.20241105.8bc37bb.fc41.noarch.rpm
 
+# Add ukify
+dnf install -y                                                                                         \
+  ukify
+
 # Hide some application entries
 for i in                                                                                               \
   /usr/share/applications/org.kde.contactprintthemeeditor.desktop                                      \
