@@ -52,8 +52,8 @@ jobs:
             containerfiles: |
               ./Containerfile
             build-args: |
-              BASE_IMAGE_NAME=kinoite
-              HOST=${{ env.IMAGE_NAME }}
+              - BASE_IMAGE_NAME=kinoite
+              - HOST=${{ env.IMAGE_NAME }}
             image: ${{ env.IMAGE_NAME }}
             labels: ${{ steps.meta.outputs.labels }}
             context: ${{ env.GITHUB_WORKSPACE }}
