@@ -67,8 +67,9 @@ dnf install -y                                                                  
 dnf install -y                                                                                         \
   /tmp/umu-launcher-1.1.3-1.20241105.8bc37bb.fc41.noarch.rpm
 
-# Add ukify
+# Add mkosi, ukify
 dnf install -y                                                                                         \
+  mkosi
   ukify
 
 # Hide some application entries
