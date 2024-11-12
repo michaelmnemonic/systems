@@ -57,18 +57,11 @@ dnf install -y                                                                  
   qt6-qtlocation
 
 # Add gaming appllications
-dnf install -y                                                                                     \
+dnf install -y                                                                                         \
   --setopt=excludepkgs=nvtop                                                                           \
   gamescope                                                                                            \
   mangohud                                                                                             \
-  steam                                                                                                \
-  wine-arial-fonts                                                                                     \
-  wine-core                                                                                            \
-  wine-ldap                                                                                            \
-  wine-mono                                                                                            \
-  wine-pulseaudio                                                                                      \
-  wine-times-new-roman-fonts                                                                           \
-  wine-times-new-roman-fonts-system
+  steam
 
 # Add umu launcher
 dnf install -y                                                                                         \
