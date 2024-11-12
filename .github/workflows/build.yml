@@ -16,7 +16,7 @@ env:
   IMAGE_DESC: "Experiements with fedora ostree containers"
 
 jobs:
-  build_push:
+  build_image:
     name: Build and push image
     runs-on: ubuntu-24.04
 
