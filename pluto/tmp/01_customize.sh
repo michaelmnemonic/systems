@@ -70,7 +70,8 @@ dnf install -y                                                                  
 # Add mkosi, ukify
 dnf install -y                                                                                         \
   mkosi                                                                                                \
-  ukify
+  ukify \
+  virtiofsd
 
 # Hide some application entries
 for i in                                                                                               \
