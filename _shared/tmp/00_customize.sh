@@ -23,6 +23,10 @@ dnf install -y                                                                  
 dnf install -y                                                                                     \
   syncthing
 
+# Add some basic packages
+dnf install -y \
+  zstd
+
 # Hide synthing desktop entries
 for i in                                                                                               \
   /usr/share/applications/syncthing-start.desktop                                                      \
