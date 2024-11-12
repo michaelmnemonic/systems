@@ -11,7 +11,7 @@ dnf swap -y mesa-va-drivers mesa-va-drivers-freeworld
 dnf swap -y mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
 
 # Add language pack
-RUN dnf install -y                                                                                      \
+dnf install -y                                                                                      \
   langpacks-de
 
 # Add fonts
@@ -20,5 +20,11 @@ dnf install -y                                                                  
   jetbrains-mono-fonts
 
 # Add syncthing
-RUN dnf install -y                                                                                     \
+dnf install -y                                                                                     \
   syncthing
+
+# Hide synthing desktop entries
+for i in                                                                                               \
+  /usr/share/applications/syncthing-start.desktop                                                      \
+  /usr/share/applications/syncthing-ui.desktop                                                         \
+; do sed -i 's@\[Desktop Entry\]@\[Desktop Entry\]\nNoDisplay=true@g' $i; done

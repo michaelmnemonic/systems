@@ -42,7 +42,7 @@ dnf install -y                                                                  
   libreoffice-writer
 
 # Add basic kde appllications
-# FIXME: check okular flatpak for support of color-schemes
+# FIXME: check okular flatpak once it support color-schemes
 dnf install -y                                                                                         \
   kate                                                                                                 \
   ksshaskpass                                                                                          \
@@ -82,7 +82,5 @@ for i in                                                                        
   /usr/share/applications/org.kde.ktnef.desktop                                                        \
   /usr/share/applications/org.kde.pimdataexporter.desktop                                              \
   /usr/share/applications/org.kde.sieveeditor.desktop                                                  \
-  /usr/share/applications/syncthing-start.desktop                                                      \
-  /usr/share/applications/syncthing-ui.desktop                                                         \
 ; do sed -i 's@\[Desktop Entry\]@\[Desktop Entry\]\nNoDisplay=true@g' $i; done  &&                     \
 sed -i 's/Network;FileTransfer;//' /usr/share/applications/steam.desktop
