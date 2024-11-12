@@ -26,10 +26,6 @@ jobs:
       id-token: write
 
     steps:
-        - name: Define env.IMAGE_NAME
-          run: |
-            echo "IMAGE_NAME=${{ matrix.image_name }}" >> $GITHUB_ENV
-
         - name: Checkout repository
           uses: actions/checkout@v4
 
@@ -54,7 +50,7 @@ jobs:
             image: ${{ env.IMAGE_NAME }}
             build-args: |
               BASE_IMAGE_NAME=kinoite
-              HOST=pluto
+              HOST=${{ env.IMAGE_NAME }}
             labels: ${{ steps.meta.outputs.labels }}
             context: ${{ env.GITHUB_WORKSPACE }}
             oci: false
