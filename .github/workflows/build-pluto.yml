@@ -6,7 +6,7 @@ on:
             - main
         paths-ignore:
             - '**/README.md'
-               'juno/*'
+            - 'juno/*'
     schedule:
      - cron: '05 10 * * *'  # 10:05am UTC everyday
     workflow_dispatch:
