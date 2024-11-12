@@ -10,5 +10,5 @@ RUN useradd -G wheel -u 1000 -s /bin/bash maik && \
 # Customize the image
 COPY ../_shared/files/ ${HOST}/files/ /
 RUN shared/customize.sh &&                 \
-    {$HOST}/customize.sh &&                \
+    ${HOST}/customize.sh &&                \
     /usr/libexec/containerbuild/cleanup.sh
