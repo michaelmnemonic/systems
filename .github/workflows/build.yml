@@ -2,15 +2,15 @@
 name: build-image
 on:
     workflow_call:
-    inputs:
-      image_name:
-        description: "Name of the image: pluto, or juno"
-        required: true
-        type: string
-      base_image_name:
-        description: "Name of the base image: silverblue, or kinoite"
-        required: true
-        type: string
+      inputs:
+        image_name:
+          description: "Name of the image: pluto, or juno"
+          required: true
+          type: string
+        base_image_name:
+          description: "Name of the base image: silverblue, or kinoite"
+          required: true
+          type: string
 
 env:
   IMAGE_DESC: "Experiements with fedora ostree containers"
