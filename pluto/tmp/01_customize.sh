@@ -71,7 +71,8 @@ dnf install -y                                                                  
   mkosi                                                                                                \
   ukify \
   virtiofsd \
-  qemu-device-display-virtio-vga
+  qemu-device-display-virtio-vga \
+  swtpm
 
 # Hide some application entries
 for i in                                                                                               \
