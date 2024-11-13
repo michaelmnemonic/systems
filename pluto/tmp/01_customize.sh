@@ -3,7 +3,6 @@
 # Remove unneeded packages
 dnf remove -y                                                                                       \
   firewall-config                                                                                       \
-  krdp
 
 
 # Add pam_mount
