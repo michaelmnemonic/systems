@@ -11,6 +11,3 @@ RUN useradd -G wheel -u 1000 -s /bin/bash maik && \
 # Customize the image
 COPY ../_shared/ ${HOST}/ /
 RUN find /tmp/ -name "*_customize*.sh" -exec {} \; && /tmp/cleanup.sh
-
-# Enable system services
-RUN systemctl enable bootc-fetch-apply-updates.timer
