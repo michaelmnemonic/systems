@@ -1,0 +1,9 @@
+#! /bin/bash
+
+# Add mkosi, ukify
+dnf install -y                   \
+  mkosi                          \
+  ukify                          \
+  virtiofsd                      \
+  qemu-device-display-virtio-vga \
+  swtpm
