@@ -4,11 +4,6 @@
 dnf remove -y                                                                                       \
   firewall-config                                                                                       \
 
-
-# Add pam_mount
-dnf install -y                                                                                     \
-  pam_mount
-
 # Add lm-sensor (needed for fan2go)
 dnf install -y                                                                                         \
   lm_sensors                                                                                           \

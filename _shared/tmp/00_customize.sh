@@ -27,6 +27,10 @@ dnf install -y                                                                  
 dnf install -y \
   zstd
 
+# Add pam_mount
+dnf install -y                                                                                     \
+  pam_mount
+
 # Hide synthing desktop entries
 for i in                                                                                               \
   /usr/share/applications/syncthing-start.desktop                                                      \
