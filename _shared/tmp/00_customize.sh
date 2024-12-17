@@ -27,6 +27,10 @@ dnf install -y                                                                  
 dnf install -y \
   zstd
 
+# Add tailscale
+dnf install -y \
+  tailscale
+
 # Add pam_mount
 dnf install -y                                                                                     \
   pam_mount
