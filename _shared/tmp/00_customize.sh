@@ -45,6 +45,9 @@ flatpak remote-add --system --if-not-exists flathub https://dl.flathub.org/repo/
 flatpak remote-modify --disable fedora
 flatpak remote-modify --disable fedora-testing
 
+# Enable automatic updates
+systemctl enable bootc-fetch-apply-updates.timer
+
 # Hide synthing desktop entries
 for i in                                                                                               \
   /usr/share/applications/syncthing-start.desktop                                                      \
