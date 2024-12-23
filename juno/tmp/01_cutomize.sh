@@ -1,4 +1,4 @@
-#!/bin/bash
+#! /bin/bash
 
 # Remove unneeded packages
 dnf remove -y                                                                                           \
