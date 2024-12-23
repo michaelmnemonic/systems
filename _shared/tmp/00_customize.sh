@@ -30,6 +30,9 @@ dnf install -y \
 # Add tailscale
 dnf install -y \
   tailscale
+  
+# Enable tailscale on boot
+ln -s /usr/lib/systemd/system/tailscaled.service /usr/lib/systemd/system/multi-user.target.wants/tailscaled.service
 
 # Add pam_mount
 dnf install -y                                                                                     \
