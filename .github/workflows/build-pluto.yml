@@ -14,7 +14,7 @@ on:
 jobs:
   build_pluto:
     name: Build and push image
-    uses: ./.github/workflows/build-arm.yml
+    uses: ./.github/workflows/build.yml
     permissions:
       contents: read
       packages: write
