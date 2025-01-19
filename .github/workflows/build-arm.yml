@@ -1,5 +1,5 @@
 ---
-name: build-image
+name: build-image-arm
 on:
     workflow_call:
       inputs:
