@@ -43,7 +43,7 @@ jobs:
             org.opencontainers.image.description=${{ env.IMAGE_DESC }}
             org.opencontainers.image.title=${{ env.IMAGE_NAME }}
 
-      - name: Install buildah tool
+      - name: Install buildah
         run: |
           sudo apt-get update
           sudo apt-get install -y buildah
