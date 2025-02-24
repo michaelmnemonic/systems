@@ -62,6 +62,11 @@ jobs:
           context: ${{ env.GITHUB_WORKSPACE }}
           oci: false
 
+      - name: Install podman
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y podman
+
       - name: Push Image to GHCR
         uses: redhat-actions/push-to-registry@v2
         id: push
