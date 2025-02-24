@@ -1,5 +1,5 @@
 ---
-name: build-juno
+name: build-charon
 on:
   push:
     branches:
