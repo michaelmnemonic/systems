@@ -1,15 +1,18 @@
 ---
 name: build-juno
 on:
-    push:
-        branches:
-            - main
-        paths-ignore:
-            - '**/README.md'
-            - 'pluto/*'
-    schedule:
-     - cron: '05 10 * * *'  # 10:05am UTC everyday
-    workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - "**/README.md"
+      - "charon/*"
+      - ".github/workflows/build-charon.yml"
+      - "pluto/*"
+      - ".github/workflows/build-pluto.yml"
+  schedule:
+    - cron: "05 10 * * *" # 10:05am UTC everyday
+  workflow_dispatch:
 
 jobs:
   build_juno:
