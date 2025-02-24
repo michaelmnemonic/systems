@@ -26,3 +26,4 @@ jobs:
     with:
       image_name: "pluto"
       base_image_name: "kinoite"
+    secrets: inherit
