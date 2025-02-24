@@ -26,3 +26,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - uses: sigstore/cosign-installer@v3.7.0
+        if: github.event_name != 'pull_request'
