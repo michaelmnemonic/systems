@@ -1,0 +1,28 @@
+---
+name: build-juno
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - "**/README.md"
+      - "pluto/*"
+      - "juno/*"
+  schedule:
+    - cron: "05 10 * * *" # 10:05am UTC everyday
+  workflow_dispatch:
+
+env:
+  IMAGE_DESC: "Experiements with fedora ostree containers"
+
+jobs:
+  build_charon:
+    name: Build and push image
+    runs-on: ubuntu-24.04-arm
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
