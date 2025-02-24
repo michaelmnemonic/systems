@@ -57,7 +57,7 @@ jobs:
             ./Containerfile
           image: ${{ env.IMAGE_NAME }}
           build-args: |
-            BASE_IMAGE_NAME=kinoite
+            BASE_IMAGE_NAME=silverblue
             HOST=charon
           labels: ${{ steps.meta.outputs.labels }}
           context: ${{ env.GITHUB_WORKSPACE }}
