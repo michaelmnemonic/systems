@@ -38,6 +38,10 @@ ln -s /usr/lib/systemd/system/tailscaled.service /usr/lib/systemd/system/multi-u
 dnf install -y                                                                                     \
   pam_mount
 
+# Add pam_fscrypt
+dnf install -y \
+  pam_fscrypt
+
 # Use luks partition for home of user "MAIK"
 sed -i '/<!-- Volume definitions -->/a <volume user="maik" fstype="crypt" path="/dev/disk/by-partlabel/MAIK" mountpoint="~" options="crypto_name=MAIK,fstype=ext4" />' /etc/security/pam_mount.conf.xml
 
