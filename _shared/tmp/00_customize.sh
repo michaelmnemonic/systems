@@ -41,6 +41,9 @@ dnf install -y                                                                  
 # Use luks partition for home of user "MAIK"
 sed -i '/<!-- Volume definitions -->/a <volume user="maik" fstype="crypt" path="/dev/disk/by-partlabel/MAIK" mountpoint="~" options="crypto_name=MAIK,fstype=ext4" />' /etc/security/pam_mount.conf.xml
 
+# Switch to luks encrypted home
+authselect select custom/lukshome
+
 # Enable automatic updates
 systemctl enable bootc-fetch-apply-updates.timer
 
