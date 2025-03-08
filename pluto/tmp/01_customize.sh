@@ -57,9 +57,14 @@ dnf install -y                                                                  
   steam
 
 # Add wine
-dnf install -y
-    wine-core
-    wine-fonts
+dnf install -y                                                                                        \
+ wine-arial-fonts                                                                                     \
+ wine-core                                                                                            \
+ wine-ldap                                                                                            \
+ wine-mono                                                                                            \
+ wine-pulseaudio                                                                                      \
+ wine-times-new-roman-fonts                                                                           \
+ wine-times-new-roman-fonts-system
 
 # Add umu launcher
 dnf install -y                                                                                         \
