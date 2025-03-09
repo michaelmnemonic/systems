@@ -67,10 +67,14 @@ dnf install -y                                                                  
  wine-times-new-roman-fonts                                                                           \
  wine-times-new-roman-fonts-system
 
-# Install opencl support via rocm
+# Add opencl support via rocm
 dnf install -y                                                                                        \
  rocm-opencl                                                                                          \
  rocm-clinfo
+
+# Add ramalama
+dnf install -y    \
+ python3-ramalama \
 
 # Hide some application entries
 for i in                                                                                               \
