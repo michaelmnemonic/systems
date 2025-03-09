@@ -12,7 +12,8 @@ dnf swap -y mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
 
 # Add language pack
 dnf install -y                                                                                      \
-  langpacks-de
+  langpacks-de \
+  glibc-langpack-de
 
 # Add fonts
 dnf install -y                                                                                     \
