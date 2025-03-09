@@ -59,6 +59,7 @@ dnf install -y                                                                  
 # Add wine
 dnf install -y                                                                                        \
  wine-arial-fonts                                                                                     \
+ wine-common                                                                                          \
  wine-core                                                                                            \
  wine-ldap                                                                                            \
  wine-mono                                                                                            \
