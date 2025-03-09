@@ -39,7 +39,7 @@ dnf install -y                                                                  
 sed -i '/<!-- Volume definitions -->/a <volume user="maik" fstype="crypt" path="/dev/disk/by-partlabel/MAIK" mountpoint="~" options="crypto_name=MAIK,fstype=ext4" />' /etc/security/pam_mount.conf.xml
 
 # Use nicer password message
-sed -i '/<\/pam_mount>/i\<msg-authpw>pam_mount password:<\/msg-authpw>\n' /etc/security/pam_mount.conf.xml
+sed -i '/<\/pam_mount>/i\<msg-authpw>Passwort:<\/msg-authpw>\n' /etc/security/pam_mount.conf.xml
 
 # Enable automatic updates
 systemctl enable bootc-fetch-apply-updates.timer
