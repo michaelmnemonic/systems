@@ -6,8 +6,8 @@ on:
       - main
     paths-ignore:
       - "**/README.md"
-      - "pluto/*"
-      - "juno/*"
+      - "pluto/**"
+      - "juno/**"
   schedule:
     - cron: "05 10 * * *" # 10:05am UTC everyday
   workflow_dispatch:

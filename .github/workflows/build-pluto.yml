@@ -6,9 +6,9 @@ on:
       - main
     paths-ignore:
       - "**/README.md"
-      - "charon/*"
+      - "charon/**"
       - ".github/workflows/build-charon.yml"
-      - "juno/*"
+      - "juno/**"
       - ".github/workflows/build-juno.yml"
   schedule:
     - cron: "05 10 * * *" # 10:05am UTC everyday
