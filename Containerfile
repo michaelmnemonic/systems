@@ -5,7 +5,7 @@ FROM quay.io/fedora-ostree-desktops/${BASE_IMAGE_NAME}:41
 ARG HOST
 
 # Set root password
-RUN usermod --password '$6$yIc8YCsXt1rkzeoc$72vBqymGWj7MCX0GduTvUMBqxAvxz4WYDJcASMEBaevyCrKAI1btoDM5czg366gwr6N55Zrn5zlPKTaUGsprV/'root
+RUN usermod --password '$6$yIc8YCsXt1rkzeoc$72vBqymGWj7MCX0GduTvUMBqxAvxz4WYDJcASMEBaevyCrKAI1btoDM5czg366gwr6N55Zrn5zlPKTaUGsprV/' root
 
 # Customize the image
 COPY ../_shared/ ${HOST}/ /
