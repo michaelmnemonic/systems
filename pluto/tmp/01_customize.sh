@@ -16,11 +16,6 @@ dnf install -y                                                                  
 dnf install -y                                                                                         \
   transmission-qt
 
-# Add mpv
-# FIXME: check once qt-based transmission is availlable as flatpak
-dnf install -y                                                                                         \
-  mpv
-
 # Add AusweisApp
 # FIXME: check once a verified version is availlable as flatpak
 dnf install -y                                                                                         \
