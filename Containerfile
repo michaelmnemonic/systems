@@ -1,6 +1,6 @@
 ARG BASE_IMAGE_NAME
 
-FROM quay.io/fedora-ostree-desktops/${BASE_IMAGE_NAME}:41
+FROM quay.io/fedora-ostree-desktops/${BASE_IMAGE_NAME}:42
 
 ARG HOST
 
