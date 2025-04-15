@@ -1,7 +1,7 @@
-diff --git a/usr/share/plasma/plasmoids/org.kde.plasma.lock_logout/contents/ui/data.js b/usr/share/plasma/plasmoids/org.kde.plasma.lock_logout/contents/ui/data.js
+diff --git usr/share/plasma/plasmoids/org.kde.plasma.lock_logout/contents/ui/data.js usr/share/plasma/plasmoids/org.kde.plasma.lock_logout/contents/ui/data.js
 index c784fa6..8eb695f 100644
---- a/usr/share/plasma/plasmoids/org.kde.plasma.lock_logout/contents/ui/data.js
-+++ b/usr/share/plasma/plasmoids/org.kde.plasma.lock_logout/contents/ui/data.js
+--- usr/share/plasma/plasmoids/org.kde.plasma.lock_logout/contents/ui/data.js
++++ usr/share/plasma/plasmoids/org.kde.plasma.lock_logout/contents/ui/data.js
 @@ -33,7 +33,7 @@ var data = [{
      tooltip_subText: i18n("End the session"),
      requires: "Logout"
@@ -11,10 +11,10 @@ index c784fa6..8eb695f 100644
      operation: "requestLogoutPrompt",
      configKey: "requestLogoutScreen",
      tooltip_mainText: i18nc("@info:tooltip", "Show logout screen"),
-diff --git a/usr/share/plasma/plasmoids/org.kde.plasma.lock_logout/contents/ui/main.qml b/usr/share/plasma/plasmoids/org.kde.plasma.lock_logout/contents/ui/main.qml
+diff --git usr/share/plasma/plasmoids/org.kde.plasma.lock_logout/contents/ui/main.qml usr/share/plasma/plasmoids/org.kde.plasma.lock_logout/contents/ui/main.qml
 index 7ee7c12..2ce54c3 100644
---- a/usr/share/plasma/plasmoids/org.kde.plasma.lock_logout/contents/ui/main.qml
-+++ b/usr/share/plasma/plasmoids/org.kde.plasma.lock_logout/contents/ui/main.qml
+--- usr/share/plasma/plasmoids/org.kde.plasma.lock_logout/contents/ui/main.qml
++++ usr/share/plasma/plasmoids/org.kde.plasma.lock_logout/contents/ui/main.qml
 @@ -108,7 +108,7 @@ PlasmoidItem {
                  Kirigami.Icon {
                      id: iconButton
@@ -24,10 +24,10 @@ index 7ee7c12..2ce54c3 100644
                      anchors.centerIn: parent
                      source: modelData.icon
                      scale: tapHandler.pressed ? 0.9 : 1
-diff --git a/usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray/contents/ui/main.qml b/usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray/contents/ui/main.qml
+diff --git usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray/contents/ui/main.qml usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray/contents/ui/main.qml
 index 4d66713..086e908 100644
---- a/usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray/contents/ui/main.qml
-+++ b/usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray/contents/ui/main.qml
+--- usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray/contents/ui/main.qml
++++ usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray/contents/ui/main.qml
 @@ -182,7 +182,7 @@ ContainmentItem {
                  flow: vertical ? GridView.LeftToRight : GridView.TopToBottom
  
