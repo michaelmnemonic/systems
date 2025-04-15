@@ -2,7 +2,9 @@
 
 # Remove unneeded packages
 dnf remove -y                                                                                       \
-  firewall-config                                                                                       \
+  firewall-config     \
+  firefox             \
+  firefox-langpacks   \                                                                                  \
 
 # Add lm-sensor (needed for fan2go)
 dnf install -y                                                                                         \
