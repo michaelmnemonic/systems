@@ -1,5 +1,8 @@
 #! /bin/bash
 
+# Import microsoft keys
+rpm --import https://packages.microsoft.com/keys/microsoft.asc
+
 # Add rpmfusion
 dnf install -y                                                                                          \
   https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm       \
@@ -35,6 +38,9 @@ dnf install -y \
 # Add pam_mount
 dnf install -y                                                                                     \
   pam_mount
+
+# Install vscode
+dnf install -y code
 
 # Use luks partition for home of user "MAIK"
 sed -i '/<!-- Volume definitions -->/a <volume user="maik" fstype="crypt" path="/dev/disk/by-partlabel/MAIK" mountpoint="~" options="crypto_name=MAIK,fstype=ext4" />' /etc/security/pam_mount.conf.xml
