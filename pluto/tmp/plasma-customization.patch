@@ -1,0 +1,35 @@
+diff --git a/usr/share/plasma/plasmoids/org.kde.plasma.lock_logout/contents/ui/data.js b/usr/share/plasma/plasmoids/org.kde.plasma.lock_logout/contents/ui/data.js
+index c784fa6..8eb695f 100644
+--- a/usr/share/plasma/plasmoids/org.kde.plasma.lock_logout/contents/ui/data.js
++++ b/usr/share/plasma/plasmoids/org.kde.plasma.lock_logout/contents/ui/data.js
+@@ -33,7 +33,7 @@ var data = [{
+     tooltip_subText: i18n("End the session"),
+     requires: "Logout"
+ }, {
+-    icon: "system-log-out",
++    icon: "system-shutdown",
+     operation: "requestLogoutPrompt",
+     configKey: "requestLogoutScreen",
+     tooltip_mainText: i18nc("@info:tooltip", "Show logout screen"),
+diff --git a/usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray/contents/ui/main.qml b/usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray/contents/ui/main.qml
+index 4d66713..086e908 100644
+--- a/usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray/contents/ui/main.qml
++++ b/usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray/contents/ui/main.qml
+@@ -182,7 +182,7 @@ ContainmentItem {
+                 flow: vertical ? GridView.LeftToRight : GridView.TopToBottom
+ 
+                 // The icon size to display when not using the auto-scaling setting
+-                readonly property int smallIconSize: Kirigami.Units.iconSizes.smallMedium
++                readonly property int smallIconSize: Kirigami.Units.iconSizes.small
+ 
+                 // Automatically use autoSize setting when in tablet mode, if it's
+                 // not already being used
+@@ -193,7 +193,7 @@ ContainmentItem {
+                 readonly property int rowsOrColumns: autoSize ? 1 : Math.max(1, Math.min(count, Math.floor(gridThickness / (smallIconSize + Kirigami.Units.smallSpacing))))
+ 
+                 // Add margins only if the panel is larger than a small icon (to avoid large gaps between tiny icons)
+-                readonly property int cellSpacing: Kirigami.Units.smallSpacing * (Kirigami.Settings.tabletMode ? 6 : Plasmoid.configuration.iconSpacing)
++                readonly property int cellSpacing: Kirigami.Units.mediumSpacing * (Kirigami.Settings.tabletMode ? 6 : Plasmoid.configuration.iconSpacing)
+                 readonly property int smallSizeCellLength: gridThickness < smallIconSize ? smallIconSize : smallIconSize + cellSpacing
+ 
+                 cellHeight: {

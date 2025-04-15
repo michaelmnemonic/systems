@@ -88,3 +88,6 @@ for i in                                                                        
   /usr/share/applications/org.kde.sieveeditor.desktop                                                  \
 ; do sed -i 's@\[Desktop Entry\]@\[Desktop Entry\]\nNoDisplay=true@g' $i; done  &&                     \
 sed -i 's/Network;FileTransfer;//' /usr/share/applications/steam.desktop
+
+# Customize plasma desktop
+patch -i /tmp/plasma-customization.patch
