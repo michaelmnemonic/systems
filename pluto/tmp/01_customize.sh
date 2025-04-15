@@ -41,7 +41,6 @@ dnf install -y                                                                  
 dnf install -y                                                                                         \
   kate                                                                                                 \
   ksshaskpass                                                                                          \
-  okular                                                                                               \
   skanpage
 
 # Add kdepim appllications
