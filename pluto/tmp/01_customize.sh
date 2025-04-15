@@ -85,5 +85,5 @@ sed -i 's/Network;FileTransfer;//' /usr/share/applications/steam.desktop
 
 # Customize plasma desktop
 dnf install -y patch
-patch -i /tmp/plasma-customization.patch
+patch -p0 -i /tmp/plasma-customization.patch
 dnf remove -y patch
