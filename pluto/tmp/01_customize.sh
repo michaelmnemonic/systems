@@ -70,7 +70,7 @@ dnf install -y                                                                  
  wine-times-new-roman-fonts-system
 
 # Add opencl support via rocm
-dnf install -y                                                                                        \
+dnf install --allowerasing -y                                                                                        \
  rocm-opencl                                                                                          \
  rocm-clinfo
 
