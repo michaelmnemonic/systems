@@ -16,7 +16,9 @@ jobs:
 
     - name: Scan container for vulnerabilities using DNF
       run: |
-        echo "Security    : 1" >> scan_result
+        docker run --rm ghcr.io/michaelmnemonic/pluto:latest bash -c '
+          dnf updateinfo summary
+        ' > scan_result || true
 
     - name: Rebuild image if vulnerabilities is found
       run: |
