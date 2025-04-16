@@ -13,9 +13,14 @@ jobs:
     - name: Scan container for vulnerabilities using DNF
       run: |
         dnf updateinfo summary > scan_result
+
+    - name: Rebuild image if vulnerabilities is found
+      run: |
         if grep -q "Security    : 0" scan_result; then
           echo "No Security issues found!"
         else
+          echo "Security issues found!"
           gh workflow run build-pluto.yml
+        fi
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
