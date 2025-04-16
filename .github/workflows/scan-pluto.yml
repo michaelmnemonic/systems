@@ -1,5 +1,5 @@
 ---
-name: build-pluto
+name: scan-pluto
 on:
   schedule:
     - cron: "05 10 * * *" # 10:05am UTC everyday
