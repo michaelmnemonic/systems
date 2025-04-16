@@ -12,11 +12,10 @@ jobs:
     steps:
     - name: Scan container for vulnerabilities using DNF
       run: |
-        dnf updateinfo summary > scan_result
+        echo "Security    : 1" >> scan_result
 
     - name: Rebuild image if vulnerabilities is found
       run: |
-        echo "Security    : 1" >> scan_result
         if grep -q "Security    : 0" scan_result; then
           echo "No Security issues found!"
         else
