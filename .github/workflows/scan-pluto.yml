@@ -8,10 +8,12 @@ on:
 jobs:
   scan-pluto:
     runs-on: ubuntu-latest
+    permissions:
+      actions: write
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-      
+
     - name: Scan container for vulnerabilities using DNF
       run: |
         echo "Security    : 1" >> scan_result
