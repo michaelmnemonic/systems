@@ -1,0 +1,15 @@
+---
+name: build-pluto
+on:
+  schedule:
+    - cron: "05 10 * * *" # 10:05am UTC everyday
+  workflow_dispatch:
+
+jobs:
+  scan-pluto:
+    runs-on: ubuntu-latest
+    container: ghcr.io/michaelmnemonic/pluto:latest
+    steps:
+    - name: Scan container for vulnerabilities using DNF
+      run: |
+        dnf updateinfo list updates security
