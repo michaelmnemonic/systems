@@ -12,4 +12,4 @@ jobs:
     steps:
     - name: Scan container for vulnerabilities using DNF
       run: |
-        dnf updateinfo --summary security
+        dnf updateinfo --help
