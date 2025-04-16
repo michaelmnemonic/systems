@@ -2,7 +2,8 @@
 name: scan-pluto
 on:
   schedule:
-    - cron: "05 10 * * *" # 10:05am UTC everyday
+    - cron: "0 * * * *"   # at minute 0 of every hour
+    - cron: "30 * * * *"  # at minute 30 of every hour
   workflow_dispatch:
 
 jobs:
