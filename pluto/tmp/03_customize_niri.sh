@@ -9,6 +9,10 @@ dnf install -y \
   alacritty    \
   pavucontrol
 
+# Install iwd
+dnf install -y \
+  iwd
+
 # Install sddm
 dnf install -y \
   sddm         \
