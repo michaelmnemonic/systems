@@ -9,6 +9,10 @@ dnf install -y \
   alacritty    \
   pavucontrol
 
+# Install sddm
+dnf indzsll -y \
+  sddm
+
 # Add lm-sensor (needed for fan2go)
 dnf install -y                                                                                         \
   lm_sensors                                                                                           \
