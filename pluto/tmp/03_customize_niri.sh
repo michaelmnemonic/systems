@@ -11,4 +11,5 @@ dnf install -y \
 
 # Install sddm
 dnf install -y \
-  sddm
+  sddm         \
+  sddm-breeze
