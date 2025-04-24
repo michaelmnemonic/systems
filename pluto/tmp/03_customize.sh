@@ -10,7 +10,7 @@ dnf install -y \
   pavucontrol
 
 # Install sddm
-dnf indzsll -y \
+dnf install -y \
   sddm
 
 # Add lm-sensor (needed for fan2go)
