@@ -1,22 +1,6 @@
 #! /bin/bash
 
-# This script installs a session that uses the niri compositor
-
-# install niri session
-dnf install -y \
-  niri         \
-  waybar       \
-  alacritty    \
-  pavucontrol
-
-# Install sddm
-dnf install -y \
-  sddm
-
-# Add lm-sensor (needed for fan2go)
-dnf install -y                                                                                         \
-  lm_sensors                                                                                           \
-  lm_sensors-libs
+# Install gaming applications
 
 # Add gaming appllications
 dnf install -y                                                                                         \

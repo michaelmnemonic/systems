@@ -1,15 +1,6 @@
 #! /bin/bash
 
-# Remove unneeded packages
-dnf remove -y                                                                                       \
-  firewall-config     \
-  firefox             \
-  firefox-langpacks   \                                                                                  \
-
-# Add lm-sensor (needed for fan2go)
-dnf install -y                                                                                         \
-  lm_sensors                                                                                           \
-  lm_sensors-libs
+# This script installs a session that uses the kde plasma desktop
 
 # Add transmission
 # FIXME: check once qt-based transmission is availlable as flatpak
@@ -32,7 +23,6 @@ dnf install -y                                                                  
   libreoffice-writer
 
 # Add basic kde appllications
-# FIXME: check okular flatpak once it support color-schemes
 dnf install -y                                                                                         \
   kate                                                                                                 \
   ksshaskpass                                                                                          \
@@ -44,33 +34,6 @@ dnf install -y                                                                  
   kmail                                                                                                \
   merkuro                                                                                              \
   qt6-qtlocation
-
-# Add gaming appllications
-dnf install -y                                                                                         \
-  --setopt=excludepkgs=nvtop                                                                           \
-  gamescope                                                                                            \
-  mangohud                                                                                             \
-  steam
-
-# Add wine
-dnf install -y                                                                                        \
- wine-arial-fonts                                                                                     \
- wine-common                                                                                          \
- wine-core                                                                                            \
- wine-ldap                                                                                            \
- wine-mono                                                                                            \
- wine-pulseaudio                                                                                      \
- wine-times-new-roman-fonts                                                                           \
- wine-times-new-roman-fonts-system
-
-# Add opencl support via rocm
-dnf install --allowerasing -y                                                                                        \
- rocm-opencl                                                                                          \
- rocm-clinfo
-
-# Add ramalama
-dnf install -y    \
- python3-ramalama \
 
 # Hide some application entries
 for i in                                                                                               \
