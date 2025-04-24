@@ -39,6 +39,10 @@ dnf install -y \
 dnf install -y                                                                                     \
   pam_mount
 
+  # Add fonts
+dnf install -y \
+  stow
+
 # Install vscode
 dnf install -y code
 
