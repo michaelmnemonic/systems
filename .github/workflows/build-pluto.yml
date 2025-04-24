@@ -25,5 +25,5 @@ jobs:
       attestations: write
     with:
       image_name: "pluto"
-      base_image_name: "kinoite"
+      base_image_name: "base-atomic"
     secrets: inherit
