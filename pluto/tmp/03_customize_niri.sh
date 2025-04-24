@@ -18,3 +18,7 @@ dnf install -y \
 dnf install -y \
   sddm         \
   sddm-breeze
+
+# Install keepassxc
+dnf install -y \
+  keepassxc
