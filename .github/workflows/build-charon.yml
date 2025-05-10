@@ -9,7 +9,7 @@ on:
       - "pluto/**"
       - "juno/**"
   schedule:
-    - cron: "05 10 * * *" # 10:05am UTC everyday
+    - cron: "05 10 * * 0" # 10:05am UTC every sunday
   workflow_dispatch:
 
 env:
