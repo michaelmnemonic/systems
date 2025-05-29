@@ -18,11 +18,6 @@ dnf install -y                                                                  
   langpacks-de \
   glibc-langpack-de
 
-# Add fonts
-dnf install -y                                                                                     \
-  rsms-inter-fonts                                                                                     \
-  jetbrains-mono-fonts
-
 # Add syncthing
 dnf install -y                                                                                     \
   syncthing

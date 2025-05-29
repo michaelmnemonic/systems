@@ -10,3 +10,8 @@ dnf remove -y                                                                   
 dnf install -y                                                                                         \
   lm_sensors                                                                                           \
   lm_sensors-libs
+
+  # Add fonts
+  dnf install -y                                                                                     \
+    rsms-inter-fonts                                                                                     \
+    jetbrains-mono-fonts
